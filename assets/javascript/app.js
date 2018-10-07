@@ -142,6 +142,8 @@
     };
 
     database.ref("budget").push(purchase);
+
+    
   });
 
   database.ref("shoppingList").on("child_added", function (childSnapshot) {
