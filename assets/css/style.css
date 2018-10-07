@@ -2,6 +2,7 @@ h1 {
   text-align: center;
   color: white;
   font-family: 'Righteous', cursive;
+  font-size: 50px
  
 }
 
@@ -42,16 +43,11 @@ form {
 #coincap {
   text-align: center;
   font-size: 28px;
-  animation-name: coincap;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
   margin-bottom: 20px;
 }
 
 .stockData {
-  animation-name: stockData;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
+
   margin-bottom: 20px;
   font-size: 28px;
 
@@ -65,16 +61,6 @@ form {
   margin-right: auto;
 }
 
-@keyframes stockData {
-  from {left: 500px;}
-  to {left: 0px;}
-}
-
-
-@keyframes coincap {
-  from {right: 500px;}
-  to {right: 0px;}
-}
 
 #chart {
 height: auto;
@@ -121,6 +107,7 @@ margin-bottom: 5px;
 
   #chart {
     height: auto;
+    width: 100%
   }
 
 }
@@ -133,6 +120,7 @@ margin-bottom: 5px;
 
   #chart {
     height: auto;
+    width: 100%
   }
 
 }
