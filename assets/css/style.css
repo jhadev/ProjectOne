@@ -2,10 +2,13 @@ h1 {
   text-align: center;
   color: white;
   font-family: 'Righteous', cursive;
-  font-size: 50px
+  
  
 }
 
+.title {
+  font-size: 60px;
+}
 .form-card {
   margin-bottom: 20px;
 
@@ -39,7 +42,10 @@ form {
 
 }
 
-
+#panel {
+  padding: 10px;
+  
+}
 #coincap {
   text-align: center;
   font-size: 28px;
