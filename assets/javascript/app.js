@@ -587,6 +587,7 @@
         var symbol = data['Meta Data']['2. Symbol']
         var lastRefreshed = data['Meta Data']['3. Last Refreshed']
         var lastTradePriceOnly = data['Time Series (1min)'][lastRefreshed]['4. close']
+        
 
         $('#stockSymbol').html("The S&P 500 is currently at " + lastTradePriceOnly);
         $("#stockIndicator").hide();
