@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <div class="jumbotron-fluid shadow mb-5 p-3 bg-success">
+  <div class="jumbotron-fluid shadow mb-3 p-3 bg-success">
     <h1 class="title">current$ee</h1>
   </div>
   <div class="container">
@@ -46,7 +46,8 @@
         <div id="description">
           <p>
             This budgeting tool allows you to add in expenses and income to visualize your budget over time.
-            You can also add expenses via the Walmart.com Shopping List and they will add to your current month's expenses.
+            You can also add expenses via the Walmart.com Shopping List and they will add to your current month's
+            expenses.
           </p>
         </div>
       </div>
@@ -85,60 +86,60 @@
         </div>
       </div>
       <div class="card col-md-6 col-12 shadow" id="panel">
-          <!-- PANEL NAV WITH TABS -->
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a class="nav-link" id="budget" data-toggle="tab" href="#menu1">Budget</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#menu2">Shopping List</a>
-            </li>
-          </ul>
-  
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div id="menu1" class="container tab-pane fade"><br>
-              <div class="card-body">
-                <table class="table table-sm table-hover" id='data-table'>
-                  <thead>
-                    <tr>
-                      <th scope="col">Description</th>
-                      <th scope="col">Amount in $</th>
-                      <th scope="col">Date</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div id="menu2" class="container tab-pane fade"><br>
-              <div class="card-body">
-                <div id='walmart-table'>
-                </div>
-                <div class="card form-card">
-                    <div class="card-header bg-light card-title">
-                      Search for products on Walmart.com
-                    </div>
-                    <form id="search-form">
-                      <div class="form">
-                        <div class="form-group">
-                          <label for="search-input">Description</label>
-                          <input class="form-control" id="search-term" placeholder="Search for Products" type="text">
-                        </div>
-                      </div>
-                      <button class="btn btn-primary float-right" id="search">Submit</button>
-                    </form>
-                    <div id="product-results">
-          
-                    </div>
-                  </div>
-  
-  
-              </div>
+        <!-- PANEL NAV WITH TABS -->
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link" id="budget" data-toggle="tab" href="#menu1">Budget</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu2">Shopping List</a>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div id="menu1" class="container tab-pane fade"><br>
+            <div class="card-body">
+              <table class="table table-sm table-hover" id='data-table'>
+                <thead>
+                  <tr>
+                    <th scope="col">Description</th>
+                    <th scope="col">Amount in $</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
             </div>
           </div>
+          <div id="menu2" class="container tab-pane fade"><br>
+            <div class="card-body">
+              <div id='walmart-table'>
+              </div>
+              <div class="card form-card">
+                <div class="card-header bg-light card-title">
+                  Search for products on Walmart.com
+                </div>
+                <form id="search-form">
+                  <div class="form">
+                    <div class="form-group">
+                      <label for="search-input">Description</label>
+                      <input class="form-control" id="search-term" placeholder="Search for Products" type="text">
+                    </div>
+                  </div>
+                  <button class="btn btn-primary float-right" id="search">Submit</button>
+                </form>
+                <div id="product-results">
 
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     </div>
@@ -146,30 +147,30 @@
 
     <div class="row">
 
-        <!--END OF PANEL NAV -->
+      <!--END OF PANEL NAV -->
 
-      </div>
-      <div class="col-md-12 col-12">
-        <div class="card shadow" id="chart">
-          <div class="card-header bg-light card-title">
-            chart
-          </div>
-          <div class="card-body">
-            <div id="chart-div">
-              <canvas id="budgetByMonth"></canvas>
-            </div>
+    </div>
+    <div class="col-md-12 col-12">
+      <div class="card shadow" id="chart">
+        <div class="card-header bg-light card-title">
+          chart
+        </div>
+        <div class="card-body">
+          <div id="chart-div">
+            <canvas id="budgetByMonth"></canvas>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
-    <script src="assets/javascript/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
+  <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
