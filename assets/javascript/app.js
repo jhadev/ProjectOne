@@ -588,8 +588,10 @@
         var lastRefreshed = data['Meta Data']['3. Last Refreshed']
         var lastTradePriceOnly = data['Time Series (1min)'][lastRefreshed]['4. close']
         
+        var spxPrice = parseFloat(lastTradePriceOnly);
+        var spxTrimmed = spxPrice.toFixed(2);
 
-        $('#stockSymbol').html("The S&P 500 is currently at " + lastTradePriceOnly);
+        $('#stockSymbol').html("The S&P 500 is currently at " + spxTrimmed);
         $("#stockIndicator").hide();
 
       }
@@ -605,9 +607,13 @@
       var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
 
       object.forEach(function (currency) { // for each of those arrays, split it into chunks called 'currency'
-        $("#coincap").html(currency.name +
+        
+      var price = parseFloat(currency.price_usd);
+      var trimmed = price.toFixed(2);
+
+      $("#coincap").html(currency.name +
           " is currently worth $" +
-          currency.price_usd)
+          trimmed)
         // get the array keys from the API
       });
     }
