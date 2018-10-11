@@ -68,19 +68,37 @@
         addButton
           .addClass("btn btn-block btn-outline-dark")
           .addClass("table-button")
-          .text("Add to Table")
+          .text("Add to Budget")
           .appendTo(productBody)
           .attr("data-name", productsArray.items[i].name)
           .attr("data-price", productsArray.items[i].salePrice)
 
+        //var modalButton = $("<button>");
+        //modalButton
+        //.addClass("btn btn-block btn-outline-dark")
+        //.addClass("modal-button")
+        //.text("Preview Product")
+        //.appendTo(productBody)
+
+          
+
 
         // puts everything in product div
         $("#product-results").append(productDiv);
-  
+        
+       // $(".modal-button").on("click", function(event) {
+      //  event.preventDefault();
+       //   $("#previewModal").modal()
+    
+    
+        
 
 
       }
     }
+
+
+
     // ajax jquery pull
     $("#search-form").on("submit", function (event) {
       $("#search-form").hide();
@@ -112,7 +130,7 @@
           //console.log(error);
         }
       }).then(function (productData) {
-        //console.log(productData);
+        console.log(productData);
 
         printProducts(productData);
       }).catch(function (err) {
@@ -282,7 +300,7 @@
   var income = [];
   var expense = [];
 
-  database.ref("budget").once("value", function (snapshot) {
+  database.ref("budget").on("value", function (snapshot) {
     console.log(snapshot.val());
 
     var records = snapshot.val();
@@ -432,6 +450,7 @@
   // CHART ***************************************************
   var myChart = new Chart(document.getElementById("budgetByMonth"), {
     type: 'bar',
+    responsive: true,
     data: {
       labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
 
@@ -443,7 +462,9 @@
           pointStrokeColor: "#fff",
           pointHighlightFill: "#fff",
           pointHighlightStroke: "rgba(67, 214, 92,1)",
-          data: income
+          data: income,
+          backgroundColor: "rgba(0, 255, 0, 0.8)",
+          
         },
         {
           label: "Total Expense",
@@ -453,6 +474,7 @@
           pointStrokeColor: "#fff",
           pointHighlightFill: "#fff",
           pointHighlightStroke: "rgba(218, 233, 39,1)",
+          backgroundColor: "rgba(255, 0, 0, 0.8)",
           data: expense
         }
       ]
@@ -625,4 +647,24 @@
   ); // initialise the request
   json.send(); //send request
   // END OF AJAX FOR STOCKS ///////////////////////////////////////////////
+  $('iframe').attr('src', $('iframe').attr('src'));
+
+var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
+
+$(document).keydown(function(e) {
+
+  kkeys.push( e.keyCode );
+
+  if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+
+    $(document).unbind('keydown',arguments.callee);
+    
+    // do something awesome
+    $("body").addClass("konami");
+    
+    $("#myModal").modal()
+  
+  }
+
+});
 });

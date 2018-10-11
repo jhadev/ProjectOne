@@ -17,6 +17,12 @@ is a budgeting and data visualization tool for your income and expenses on a mon
 * Coinmarketcap API
 * AlphaVantage API
 
+### Fixes needed
+
+* Use modals to preview Walmart products
+* Fix chart to update
+* Change chart colors
+
 ### Future goals
 
 * Wegman's API
